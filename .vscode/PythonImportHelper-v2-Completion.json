@@ -1,0 +1,861 @@
+[
+    {
+        "label": "pyautogui",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyautogui",
+        "description": "pyautogui",
+        "detail": "pyautogui",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "pyperclip",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyperclip",
+        "description": "pyperclip",
+        "detail": "pyperclip",
+        "documentation": {}
+    },
+    {
+        "label": "pygetwindow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygetwindow",
+        "description": "pygetwindow",
+        "detail": "pygetwindow",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "scrolledtext",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "keyboard",
+        "description": "keyboard",
+        "detail": "keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "countdown_timer",
+        "kind": 2,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "def countdown_timer(seconds):\n    \"\"\"Hiển thị đếm ngược xem video\"\"\"\n    for i in range(seconds, 0, -1):\n        print(f\"👀 Đang xem video... Còn lại {i} giây \", end=\"\\r\")\n        time.sleep(1)\n    print(\"⏭️ Đã xem xong!                                \")\ndef human_click(pos):\n    \"\"\"Di chuyển chuột mượt và click\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.2), ",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "human_click",
+        "kind": 2,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "def human_click(pos):\n    \"\"\"Di chuyển chuột mượt và click\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.2), \n                     tween=pyautogui.easeOutQuad)\n    time.sleep(random.uniform(0.3, 0.6))\n    pyautogui.click()\ndef paste_comment(text):\n    \"\"\"Copy và dán nội dung vào ô comment\"\"\"\n    pyperclip.copy(text)",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "paste_comment",
+        "kind": 2,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "def paste_comment(text):\n    \"\"\"Copy và dán nội dung vào ô comment\"\"\"\n    pyperclip.copy(text)\n    time.sleep(0.5)\n    pyautogui.hotkey('ctrl', 'v')\n    time.sleep(0.8)\n    pyautogui.press('enter')\n    print(f\"✅ Đã gửi: {text}\")\n    time.sleep(1.5)\ndef action_down():",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "action_down",
+        "kind": 2,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "def action_down():\n    down_btn = pyautogui.locateCenterOnScreen(DOWN_IMG, confidence=CONFIDENCE_LEVEL)\n    if down_btn:\n        human_click(down_btn)\n        print(\"⏭️ Đã bấm nút NEXT (Down)\")\n    else:\n        # Nếu không thấy nút thì bấm phím mũi tên xuống\n        pyautogui.press('down')\n        print(\"⏭️ Đã nhấn phím DOWN để NEXT\")\ndef action_heart():",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "action_heart",
+        "kind": 2,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "def action_heart():\n    try:\n        heart = pyautogui.locateCenterOnScreen(HEART_IMG, confidence=CONFIDENCE_LEVEL)\n        if heart:\n            human_click(heart)\n            print(\"❤️ Đã thả tim\")\n            time.sleep(random.uniform(1, 2))\n            return True\n        else:\n            print(\"xxx Không tìm thấy nút tim\")",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "start_bot",
+        "kind": 2,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "def start_bot():\n    print(\"🚀 BOT ĐANG KHỞI ĐỘNG ...\")\n    time.sleep(5)\n    try_count = 0\n    while True:\n        if try_count >= 10: # Tăng giới hạn lỗi lên 10 lần cho thoải mái\n            print(\"❌ Lỗi quá nhiều lần, dừng bot để kiểm tra.\")\n            break\n        try:\n            # 4. Countdown thời gian xem",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIDENCE_LEVEL",
+        "kind": 5,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "CONFIDENCE_LEVEL = 0.8\nHEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "HEART_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "HEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "FOLLOW_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "FOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "COMMENT_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "COMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "COPPY_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "COPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",\n    \"Đỉnh quá, cho mình xin lại 1 follow để cùng tương tác nhé.\",",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "DOWN_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "DOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",\n    \"Đỉnh quá, cho mình xin lại 1 follow để cùng tương tác nhé.\",\n    \"Chill quá bạn ơi, cho mình xin lại 1 follow nhé!\",",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "MY_COMMENTS",
+        "kind": 5,
+        "importPath": "old1.main copy 3.3",
+        "description": "old1.main copy 3.3",
+        "peekOfCode": "MY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",\n    \"Đỉnh quá, cho mình xin lại 1 follow để cùng tương tác nhé.\",\n    \"Chill quá bạn ơi, cho mình xin lại 1 follow nhé!\",\n    \"Cực kỳ hữu ích, mình đã follow bạn, cho mình xin lại 1 follow nhé.\",",
+        "detail": "old1.main copy 3.3",
+        "documentation": {}
+    },
+    {
+        "label": "human_move_and_click",
+        "kind": 2,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "def human_move_and_click(pos):\n    \"\"\"Di chuyển chuột mượt mà và click giống người thật\"\"\"\n    # Di chuyển đến vị trí trong khoảng 0.5 - 1.2 giây\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.1), \n                     tween=pyautogui.easeOutQuad)\n    time.sleep(random.uniform(0.2, 0.4))\n    pyautogui.click()\ndef type_like_human(text):\n    \"\"\"Gõ phím từng chữ với tốc độ ngẫu nhiên\"\"\"",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "type_like_human",
+        "kind": 2,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "def type_like_human(text):\n    \"\"\"Gõ phím từng chữ với tốc độ ngẫu nhiên\"\"\"\n    for char in text:\n        pyautogui.write(char)\n        time.sleep(random.uniform(0.08, 0.25))\ndef start_bot():\n    # Lấy kích thước màn hình để giới hạn vùng quét (chỉ quét bên phải)\n    sw, sh = pyautogui.size()\n    # Region = (x, y, width, height) -> Nửa bên phải màn hình\n    right_region = (sw // 2, 0, sw // 2, sh)",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "start_bot",
+        "kind": 2,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "def start_bot():\n    # Lấy kích thước màn hình để giới hạn vùng quét (chỉ quét bên phải)\n    sw, sh = pyautogui.size()\n    # Region = (x, y, width, height) -> Nửa bên phải màn hình\n    right_region = (sw // 2, 0, sw // 2, sh)\n    print(\"🚀 Bot đang khởi động... Hãy mở trình duyệt TikTok PC!\")\n    print(\"🔔 Mẹo: Để cửa sổ trình duyệt chiếm toàn màn hình.\")\n    time.sleep(5)\n    while True:\n        try:",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIDENCE_LEVEL",
+        "kind": 5,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "CONFIDENCE_LEVEL = 0.7  # Độ chính xác (0.9 là rất cao để tránh bấm nhầm)\nHEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\n# Danh sách nội dung comment ngẫu nhiên\nMY_COMMENTS = [\n    \"Video hay quá bạn ơi! ❤️\",\n    \"Nội dung chất lượng thật sự.\",\n    \"Rất hữu ích, cảm ơn bạn!\",\n    \"Chill phết nhỉ, thả tim nha.\",",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "HEART_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "HEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\n# Danh sách nội dung comment ngẫu nhiên\nMY_COMMENTS = [\n    \"Video hay quá bạn ơi! ❤️\",\n    \"Nội dung chất lượng thật sự.\",\n    \"Rất hữu ích, cảm ơn bạn!\",\n    \"Chill phết nhỉ, thả tim nha.\",\n    \"Đỉnh quá chủ thớt ơi!\",",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "FOLLOW_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "FOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\n# Danh sách nội dung comment ngẫu nhiên\nMY_COMMENTS = [\n    \"Video hay quá bạn ơi! ❤️\",\n    \"Nội dung chất lượng thật sự.\",\n    \"Rất hữu ích, cảm ơn bạn!\",\n    \"Chill phết nhỉ, thả tim nha.\",\n    \"Đỉnh quá chủ thớt ơi!\",\n    \"Tương tác cùng nhau phát triển nhé!\",",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "COMMENT_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "COMMENT_IMG = 'comment_box.png'\n# Danh sách nội dung comment ngẫu nhiên\nMY_COMMENTS = [\n    \"Video hay quá bạn ơi! ❤️\",\n    \"Nội dung chất lượng thật sự.\",\n    \"Rất hữu ích, cảm ơn bạn!\",\n    \"Chill phết nhỉ, thả tim nha.\",\n    \"Đỉnh quá chủ thớt ơi!\",\n    \"Tương tác cùng nhau phát triển nhé!\",\n    \"Hay quá, hóng video tiếp theo.\"",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "MY_COMMENTS",
+        "kind": 5,
+        "importPath": "old1.main copy 2",
+        "description": "old1.main copy 2",
+        "peekOfCode": "MY_COMMENTS = [\n    \"Video hay quá bạn ơi! ❤️\",\n    \"Nội dung chất lượng thật sự.\",\n    \"Rất hữu ích, cảm ơn bạn!\",\n    \"Chill phết nhỉ, thả tim nha.\",\n    \"Đỉnh quá chủ thớt ơi!\",\n    \"Tương tác cùng nhau phát triển nhé!\",\n    \"Hay quá, hóng video tiếp theo.\"\n]\ndef human_move_and_click(pos):",
+        "detail": "old1.main copy 2",
+        "documentation": {}
+    },
+    {
+        "label": "human_click",
+        "kind": 2,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "def human_click(pos):\n    \"\"\"Di chuyển chuột đường cong và click giống người thật\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.2), \n                     tween=pyautogui.easeOutQuad)\n    time.sleep(random.uniform(0.2, 0.5))\n    pyautogui.click()\ndef type_like_human(text):\n    \"\"\"Gõ phím từng ký tự với tốc độ ngẫu nhiên (Nhập dần)\"\"\"\n    for char in text:",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "type_like_human",
+        "kind": 2,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "def type_like_human(text):\n    \"\"\"Gõ phím từng ký tự với tốc độ ngẫu nhiên (Nhập dần)\"\"\"\n    for char in text:\n        pyautogui.write(char)\n        # Nghỉ ngẫu nhiên giữa mỗi phím từ 0.05 đến 0.25 giây\n        time.sleep(random.uniform(0.05, 0.25))\ndef start_bot():\n    print(\"🚀 BOT ĐANG KHỞI ĐỘNG (BẢN TƯƠNG TÁC TỰ NHIÊN)...\")\n    print(\"👉 Hãy mở trình duyệt TikTok PC và để cửa sổ hiển thị rõ.\")\n    time.sleep(5)",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "start_bot",
+        "kind": 2,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "def start_bot():\n    print(\"🚀 BOT ĐANG KHỞI ĐỘNG (BẢN TƯƠNG TÁC TỰ NHIÊN)...\")\n    print(\"👉 Hãy mở trình duyệt TikTok PC và để cửa sổ hiển thị rõ.\")\n    time.sleep(5)\n    while True:\n        try:\n            print(\"\\n--- Đang quét video mới ---\")\n            # 1. Thả tim (Xác suất 90% sẽ làm)\n            if random.random() < 0.9:\n                heart = pyautogui.locateCenterOnScreen(HEART_IMG, confidence=CONFIDENCE_LEVEL)",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIDENCE_LEVEL",
+        "kind": 5,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "CONFIDENCE_LEVEL = 0.9\nHEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\n# Danh sách comment có nghĩa và tự nhiên\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban ơi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thớt cho minh xin lai 1 follow nhe.\",",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "HEART_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "HEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\n# Danh sách comment có nghĩa và tự nhiên\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban ơi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thớt cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "FOLLOW_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "FOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\n# Danh sách comment có nghĩa và tự nhiên\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban ơi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thớt cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "COMMENT_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "COMMENT_IMG = 'comment_box.png'\n# Danh sách comment có nghĩa và tự nhiên\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban ơi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thớt cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",\n    \"Dinh qua, cho minh xin lai 1 fl de cung tuong tac nhe.\",",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "MY_COMMENTS",
+        "kind": 5,
+        "importPath": "old1.main copy 3",
+        "description": "old1.main copy 3",
+        "peekOfCode": "MY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban ơi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thớt cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",\n    \"Dinh qua, cho minh xin lai 1 fl de cung tuong tac nhe.\",\n    \"Chill qua ban oi, cho minh xin lai 1 follow nhe!\",\n    \"Cuc ky huu ich, minh da fl ban, cho minh xin lai 1 fl nhe.\",",
+        "detail": "old1.main copy 3",
+        "documentation": {}
+    },
+    {
+        "label": "countdown_timer",
+        "kind": 2,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "def countdown_timer(seconds):\n    \"\"\"Hiển thị đếm ngược xem video\"\"\"\n    for i in range(seconds, 0, -1):\n        print(f\"👀 Đang xem video... Còn lại {i} giây \", end=\"\\r\")\n        time.sleep(1)\n    print(\"⏭️ Đã xem xong!                                \")\ndef human_click(pos):\n    \"\"\"Di chuyển chuột mượt và click\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.2), ",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "human_click",
+        "kind": 2,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "def human_click(pos):\n    \"\"\"Di chuyển chuột mượt và click\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.2), \n                     tween=pyautogui.easeOutQuad)\n    time.sleep(random.uniform(0.3, 0.6))\n    pyautogui.click()\ndef paste_comment(text):\n    \"\"\"Copy và dán nội dung vào ô comment\"\"\"\n    pyperclip.copy(text)",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "paste_comment",
+        "kind": 2,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "def paste_comment(text):\n    \"\"\"Copy và dán nội dung vào ô comment\"\"\"\n    pyperclip.copy(text)\n    time.sleep(0.5)\n    pyautogui.hotkey('ctrl', 'v')\n    time.sleep(0.8)\n    pyautogui.press('enter')\n    print(f\"✅ Đã gửi: {text}\")\n    # --- GIẢI QUYẾT VẤN ĐỀ FOCUS ---\n    time.sleep(1)",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "start_bot",
+        "kind": 2,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "def start_bot():\n    print(\"🚀 BOT ĐANG KHỞI ĐỘNG ...\")\n    time.sleep(8)\n    try_count = 0\n    while True:\n        try:\n            print(\"\\n\" + \"=\"*30)\n            # 1. Thả tim\n            if random.random() < 0.9:\n                heart = pyautogui.locateCenterOnScreen(HEART_IMG, confidence=CONFIDENCE_LEVEL)",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIDENCE_LEVEL",
+        "kind": 5,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "CONFIDENCE_LEVEL = 0.8\nHEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nDOWN_IMG = 'down.png'\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "HEART_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "HEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nDOWN_IMG = 'down.png'\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "FOLLOW_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "FOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nDOWN_IMG = 'down.png'\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "COMMENT_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "COMMENT_IMG = 'comment_box.png'\nDOWN_IMG = 'down.png'\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "DOWN_IMG",
+        "kind": 5,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "DOWN_IMG = 'down.png'\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",\n    \"Dinh qua, cho minh xin lai 1 fl de cung tuong tac nhe.\",",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "MY_COMMENTS",
+        "kind": 5,
+        "importPath": "old1.main copy",
+        "description": "old1.main copy",
+        "peekOfCode": "MY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",\n    \"Dinh qua, cho minh xin lai 1 fl de cung tuong tac nhe.\",\n    \"Chill qua ban oi, cho minh xin lai 1 follow nhe!\",\n    \"Cuc ky huu ich, minh da fl ban, cho minh xin lai 1 fl nhe.\",",
+        "detail": "old1.main copy",
+        "documentation": {}
+    },
+    {
+        "label": "countdown_timer",
+        "kind": 2,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "def countdown_timer(seconds):\n    \"\"\"Hiển thị đếm ngược xem video\"\"\"\n    for i in range(seconds, 0, -1):\n        print(f\"👀 Đang xem video... Còn lại {i} giây \", end=\"\\r\")\n        time.sleep(1)\n    print(\"⏭️ Đã xem xong!                                \")\ndef human_click(pos):\n    \"\"\"Di chuyển chuột mượt và click\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.2), ",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "human_click",
+        "kind": 2,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "def human_click(pos):\n    \"\"\"Di chuyển chuột mượt và click\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1.2), \n                     tween=pyautogui.easeOutQuad)\n    time.sleep(random.uniform(0.3, 0.6))\n    pyautogui.click()\ndef paste_comment(text):\n    \"\"\"Copy và dán nội dung vào ô comment\"\"\"\n    pyperclip.copy(text)",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "paste_comment",
+        "kind": 2,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "def paste_comment(text):\n    \"\"\"Copy và dán nội dung vào ô comment\"\"\"\n    pyperclip.copy(text)\n    time.sleep(0.5)\n    pyautogui.hotkey('ctrl', 'v')\n    time.sleep(0.8)\n    pyautogui.press('enter')\n    print(f\"✅ Đã gửi: {text}\")\n    # --- GIẢI QUYẾT VẤN ĐỀ FOCUS (BẮT BUỘC) ---\n    time.sleep(1.5)",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "action_down",
+        "kind": 2,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "def action_down():\n    down_btn = pyautogui.locateCenterOnScreen(DOWN_IMG, confidence=CONFIDENCE_LEVEL)\n    if down_btn:\n        human_click(down_btn)\n        print(\"⏭️ Đã bấm nút NEXT (Down)\")\n    else:\n        # Nếu không thấy nút thì bấm phím mũi tên xuống\n        pyautogui.press('down')\n        print(\"⏭️ Đã nhấn phím DOWN để NEXT\")\ndef start_bot():",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "start_bot",
+        "kind": 2,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "def start_bot():\n    print(\"🚀 BOT ĐANG KHỞI ĐỘNG ...\")\n    time.sleep(5)\n    try_count = 0\n    while True:\n        if try_count >= 10: # Tăng giới hạn lỗi lên 10 lần cho thoải mái\n            print(\"❌ Lỗi quá nhiều lần, dừng bot để kiểm tra.\")\n            break\n        try:\n            # 4. Countdown thời gian xem",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIDENCE_LEVEL",
+        "kind": 5,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "CONFIDENCE_LEVEL = 0.8\nHEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "HEART_IMG",
+        "kind": 5,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "HEART_IMG = 'heart.png'\nFOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "FOLLOW_IMG",
+        "kind": 5,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "FOLLOW_IMG = 'follow.png'\nCOMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "COMMENT_IMG",
+        "kind": 5,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "COMMENT_IMG = 'comment_box.png'\nCOPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "COPPY_IMG",
+        "kind": 5,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "COPPY_IMG = 'copy.png'\nDOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "DOWN_IMG",
+        "kind": 5,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "DOWN_IMG = 'down.png' # Nút mũi tên xuống trên giao diện TikTok PC\n# Danh sách comment xin follow\nMY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",\n    \"Dinh qua, cho minh xin lai 1 fl de cung tuong tac nhe.\",",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "MY_COMMENTS",
+        "kind": 5,
+        "importPath": "v1.main",
+        "description": "v1.main",
+        "peekOfCode": "MY_COMMENTS = [\n    \"Video hay qua, cho minh xin lai 1 fl nhe!\",\n    \"Clip cuon qua ban oi, cho minh xin 1 follow voi nha.\",\n    \"Hay qua, minh da tim va fl ban, cho minh xin lai 1 fl nhe!\",\n    \"Noi dung chat qua, thot cho minh xin lai 1 follow nhe.\",\n    \"Hay thuc su, da tim va fl, ban fl lai minh voi nha.\",\n    \"Video hay qua, minh fl ban roi, xin lai 1 fl tu ban nhe!\",\n    \"Dinh qua, cho minh xin lai 1 fl de cung tuong tac nhe.\",\n    \"Chill qua ban oi, cho minh xin lai 1 follow nhe!\",\n    \"Cuc ky huu ich, minh da fl ban, cho minh xin lai 1 fl nhe.\",",
+        "detail": "v1.main",
+        "documentation": {}
+    },
+    {
+        "label": "BotUI",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class BotUI:\n    def __init__(self, window):\n        self.window = window\n        self.window.title(\"TikTok Bot Config - Manager\")\n        self.window.geometry(\"1400x850\") # Tăng chiều rộng để Log nhìn rõ hơn\n        self.window.configure(bg=\"#f0f0f0\")\n        self.bot_thread = None\n        self.is_running = False\n        self.setup_ui()\n        # Tải dữ liệu từ file vào ô nhập ngay khi mở App",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "resource_path",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def resource_path(relative_path):\n    \"\"\" Lấy đường dẫn tuyệt đối đến tài nguyên, dùng cho cả dev và PyInstaller \"\"\"\n    try:\n        # PyInstaller tạo một thư mục tạm và lưu đường dẫn trong _MEIPASS\n        base_path = sys._MEIPASS\n    except Exception:\n        base_path = os.path.abspath(\".\")\n    return os.path.join(base_path, relative_path)\nCONFIDENCE_LEVEL = 0.8\nHEART_IMG = resource_path('image/heart.png')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "smart_sleep",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def smart_sleep(seconds, ui_instance):\n    global running_flag\n    for _ in range(int(seconds * 10)): \n        if not running_flag:\n            return False \n        time.sleep(0.1)\n    return True\ndef countdown_timer(seconds, ui_instance):\n    \"\"\"Đếm ngược và cập nhật trên dòng cuối cùng của Log Box\"\"\"\n    global running_flag",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "countdown_timer",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def countdown_timer(seconds, ui_instance):\n    \"\"\"Đếm ngược và cập nhật trên dòng cuối cùng của Log Box\"\"\"\n    global running_flag\n    # Ghi dòng đầu tiên để có cái mà xóa\n    print(\"👀 Đang chuẩn bị xem video...\") \n    for i in range(seconds, 0, -1):\n        if not running_flag: \n            break\n        msg = f\"👀 Đang xem video... Còn lại {i} giây\"\n        # Cập nhật giao diện",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "human_click",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def human_click(pos):\n    \"\"\"Di chuyển chuột mượt và click\"\"\"\n    pyautogui.moveTo(pos[0], pos[1], \n                     duration=random.uniform(0.6, 1), \n                     tween=pyautogui.easeOutQuad)\n    time.sleep(random.uniform(1,5))\n    offset_x = random.randint(-5, 5)\n    offset_y = random.randint(-5, 5)\n    pyautogui.click(pos[0] + offset_x, pos[1] + offset_y)\ndef paste_comment(text):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "paste_comment",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def paste_comment(text):\n    \"\"\"Copy và dán nội dung vào ô comment\"\"\"\n    pyperclip.copy(text)\n    time.sleep(random.uniform(1, 3))\n    pyautogui.hotkey('ctrl', 'v')\n    time.sleep(random.uniform(1, 3))\n    pyautogui.press('enter')\n    # print(f\"✅ Đã gửi: {text}\")\n    time.sleep(random.uniform(1, 3))\ndef action_down():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "action_down",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def action_down():\n    try:\n        down_btn = pyautogui.locateCenterOnScreen(DOWN_IMG, confidence=CONFIDENCE_LEVEL)\n        if down_btn:\n            human_click(down_btn)\n            return {\n                \"status\":True,\n                \"message\":f\"-> Đã bấm nút NEXT (Down)\"\n            }\n        else:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "action_heart",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def action_heart():\n    try:\n        heart = pyautogui.locateCenterOnScreen(HEART_IMG, confidence=CONFIDENCE_LEVEL)\n        if heart:\n            human_click(heart)\n            time.sleep(random.uniform(1, 2))\n            return {\n                \"status\":True,\n                \"message\":f\"+ Đã thả tim\"\n            }",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "action_follow",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def action_follow():\n    try:\n        heart = pyautogui.locateCenterOnScreen(FOLLOW_IMG, confidence=CONFIDENCE_LEVEL)\n        if heart:\n            human_click(heart)\n            time.sleep(random.uniform(1, 2))\n            return {\n                \"status\":True,\n                \"message\":f\"+ Đã bấm Follow\"\n            }",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "action_comment",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def action_comment(ui_instance):\n    try:\n        # 1. Tìm ô comment\n        comment_box = pyautogui.locateCenterOnScreen(COMMENT_IMG, confidence=CONFIDENCE_LEVEL)\n        if comment_box:\n            human_click(comment_box)\n            time.sleep(random.uniform(1, 2))\n            # 2. Lấy dữ liệu từ giao diện\n            raw_text = ui_instance.comment_input.get(\"1.0\", tk.END).strip()\n            # Tách dòng thành mảng, bỏ dòng trống",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "action_coppy",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def action_coppy():\n    try:\n        coppy_image = pyautogui.locateCenterOnScreen(COPPY_IMG, confidence=CONFIDENCE_LEVEL)\n        if coppy_image:\n            human_click(coppy_image)\n            time.sleep(random.uniform(1, 2))\n            return {\n                \"status\":True,\n                \"message\":\"+ Đã bấm copy\"\n            }",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "ensure_fullscreen",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def ensure_fullscreen():\n    try:\n        window = gw.getActiveWindow()\n        screen_width, screen_height = pyautogui.size()\n        if window.width < screen_width or window.height < screen_height:\n            print(\"🖥️ Màn hình chưa Full. Đang nhấn F11...\")\n            pyautogui.press('f11')\n            time.sleep(2)\n            return False\n        else:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "check_f11_by_image",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def check_f11_by_image():\n    try:\n        if pyautogui.locateOnScreen(NOT_FULL_SCREEN, confidence=CONFIDENCE_LEVEL):\n            pyautogui.press('f11')\n            print(\"⌨️ Đã nhấn F11\")\n    except Exception as e:\n        print(\"⌨️ Màn hình phải full\")   \n# start bot\ndef start_bot(ui_instance):\n    running_flag = True",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "start_bot",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def start_bot(ui_instance):\n    running_flag = True\n    # print(\"🚀 BOT ĐANG KHỞI ĐỘNG ...\")\n    time.sleep(random.uniform(5,8))\n    print(\"... Check full màn hình ...\")\n    check_f11_by_image()\n    time.sleep(random.uniform(1,3))\n    try_count = 0\n    while running_flag:\n        if try_count >= 10:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "save_comments_to_file",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def save_comments_to_file(text):\n    \"\"\"Lưu nội dung từ ô nhập liệu vào file txt\"\"\"\n    try:\n        with open(COMMENT_FILE, \"w\", encoding=\"utf-8\") as f:\n            f.write(text.strip())\n    except Exception as e:\n        print(f\"❌ Lỗi lưu file: {e}\")\ndef load_comments_from_file():\n    \"\"\"Tải nội dung từ file txt, nếu không có thì dùng mặc định\"\"\"\n    if os.path.exists(COMMENT_FILE):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "load_comments_from_file",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def load_comments_from_file():\n    \"\"\"Tải nội dung từ file txt, nếu không có thì dùng mặc định\"\"\"\n    if os.path.exists(COMMENT_FILE):\n        try:\n            with open(COMMENT_FILE, \"r\", encoding=\"utf-8\") as f:\n                content = f.read().strip()\n                if content: return content\n        except Exception as e:\n            print(f\"❌ Lỗi đọc file: {e}\")\n    return DEFAULT_COMMENTS # Trả về mảng mặc định nếu file trống/lỗi",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "running_flag",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "running_flag = False\n# --- CẤU HÌNH ---\ndef resource_path(relative_path):\n    \"\"\" Lấy đường dẫn tuyệt đối đến tài nguyên, dùng cho cả dev và PyInstaller \"\"\"\n    try:\n        # PyInstaller tạo một thư mục tạm và lưu đường dẫn trong _MEIPASS\n        base_path = sys._MEIPASS\n    except Exception:\n        base_path = os.path.abspath(\".\")\n    return os.path.join(base_path, relative_path)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "CONFIDENCE_LEVEL",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "CONFIDENCE_LEVEL = 0.8\nHEART_IMG = resource_path('image/heart.png')\nFOLLOW_IMG = resource_path('image/follow.png')\nCOMMENT_IMG = resource_path('image/comment_box.png')\nCOPPY_IMG = resource_path('image/copy.png')\nDOWN_IMG = resource_path('image/down.png')\nNOT_FULL_SCREEN = resource_path(\"image/not_full.png\")\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "HEART_IMG",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "HEART_IMG = resource_path('image/heart.png')\nFOLLOW_IMG = resource_path('image/follow.png')\nCOMMENT_IMG = resource_path('image/comment_box.png')\nCOPPY_IMG = resource_path('image/copy.png')\nDOWN_IMG = resource_path('image/down.png')\nNOT_FULL_SCREEN = resource_path(\"image/not_full.png\")\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "FOLLOW_IMG",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "FOLLOW_IMG = resource_path('image/follow.png')\nCOMMENT_IMG = resource_path('image/comment_box.png')\nCOPPY_IMG = resource_path('image/copy.png')\nDOWN_IMG = resource_path('image/down.png')\nNOT_FULL_SCREEN = resource_path(\"image/not_full.png\")\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "COMMENT_IMG",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "COMMENT_IMG = resource_path('image/comment_box.png')\nCOPPY_IMG = resource_path('image/copy.png')\nDOWN_IMG = resource_path('image/down.png')\nNOT_FULL_SCREEN = resource_path(\"image/not_full.png\")\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "COPPY_IMG",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "COPPY_IMG = resource_path('image/copy.png')\nDOWN_IMG = resource_path('image/down.png')\nNOT_FULL_SCREEN = resource_path(\"image/not_full.png\")\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "DOWN_IMG",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "DOWN_IMG = resource_path('image/down.png')\nNOT_FULL_SCREEN = resource_path(\"image/not_full.png\")\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",\n    \"Đỉnh quá, cho mình xin lại 1 follow để cùng tương tác nhé.\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "NOT_FULL_SCREEN",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "NOT_FULL_SCREEN = resource_path(\"image/not_full.png\")\nMY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",\n    \"Đỉnh quá, cho mình xin lại 1 follow để cùng tương tác nhé.\",\n    \"Chill quá bạn ơi, cho mình xin lại 1 follow nhé!\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "MY_COMMENTS",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "MY_COMMENTS = [\n    \"Video hay quá, cho mình xin lại 1 follow nhé!\",\n    \"Clip cuốn quá bạn ơi, cho mình xin 1 follow với nha.\",\n    \"Hay quá, mình đã thả tim và follow bạn, cho mình xin lại 1 follow nhé!\",\n    \"Nội dung chất quá, chủ thớt cho mình xin lại 1 follow nhé.\",\n    \"Hay thực sự, đã tim và follow, bạn follow lại mình với nha.\",\n    \"Video tuyệt quá, mình follow bạn rồi, xin lại 1 follow từ bạn nhé!\",\n    \"Đỉnh quá, cho mình xin lại 1 follow để cùng tương tác nhé.\",\n    \"Chill quá bạn ơi, cho mình xin lại 1 follow nhé!\",\n    \"Cực kỳ hữu ích, mình đã follow bạn, cho mình xin lại 1 follow nhé.\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_COMMENTS",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "DEFAULT_COMMENTS = \"\\n\".join(MY_COMMENTS)\ndef smart_sleep(seconds, ui_instance):\n    global running_flag\n    for _ in range(int(seconds * 10)): \n        if not running_flag:\n            return False \n        time.sleep(0.1)\n    return True\ndef countdown_timer(seconds, ui_instance):\n    \"\"\"Đếm ngược và cập nhật trên dòng cuối cùng của Log Box\"\"\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "COMMENT_FILE",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "COMMENT_FILE = \"my_comments.txt\"\ndef save_comments_to_file(text):\n    \"\"\"Lưu nội dung từ ô nhập liệu vào file txt\"\"\"\n    try:\n        with open(COMMENT_FILE, \"w\", encoding=\"utf-8\") as f:\n            f.write(text.strip())\n    except Exception as e:\n        print(f\"❌ Lỗi lưu file: {e}\")\ndef load_comments_from_file():\n    \"\"\"Tải nội dung từ file txt, nếu không có thì dùng mặc định\"\"\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_DIR",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "IMAGE_DIR = \"image\"\nIMAGE_CONFIG = {\n    \"HEART_IMG\": {\n        \"path\": os.path.join(IMAGE_DIR, \"heart.png\"),\n        \"label\": \"Nút Thả Tim\",\n        \"desc\": \"Ảnh nút trái tim chưa bấm.\"\n    },\n    \"FOLLOW_IMG\": {\n        \"path\": os.path.join(IMAGE_DIR, \"follow.png\"),\n        \"label\": \"Nút Follow\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_CONFIG",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "IMAGE_CONFIG = {\n    \"HEART_IMG\": {\n        \"path\": os.path.join(IMAGE_DIR, \"heart.png\"),\n        \"label\": \"Nút Thả Tim\",\n        \"desc\": \"Ảnh nút trái tim chưa bấm.\"\n    },\n    \"FOLLOW_IMG\": {\n        \"path\": os.path.join(IMAGE_DIR, \"follow.png\"),\n        \"label\": \"Nút Follow\",\n        \"desc\": \"Ảnh nút 'Follow' cộng đỏ trên avatar.\"",
+        "detail": "main",
+        "documentation": {}
+    }
+]
