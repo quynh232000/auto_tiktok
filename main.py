@@ -26,6 +26,7 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
+
 CONFIDENCE_LEVEL = 0.8
 HEART_IMG = resource_path('image/heart.png')
 FOLLOW_IMG = resource_path('image/follow.png')
@@ -272,7 +273,7 @@ def start_bot(ui_instance):
                 print(res_heart["message"])
             
             # 3. Comment
-            if random.random() < 0.7: # Nên thêm xác suất để tránh bị đánh dấu spam
+            if random.random() < 0.9: # Nên thêm xác suất để tránh bị đánh dấu spam
                 res_comment = action_comment(ui_instance)
                 print(res_comment["message"])
 
